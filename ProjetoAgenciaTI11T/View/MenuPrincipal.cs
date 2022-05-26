@@ -16,5 +16,10 @@ namespace ProjetoAgenciaTI11T.View
         {
             InitializeComponent();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
