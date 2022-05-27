@@ -61,9 +61,9 @@ namespace ProjetoAgenciaTI11T.View
             this.funcionárioToolStripMenuItem,
             this.pacotesToolStripMenuItem,
             this.vendaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(71, 1);
+            this.menuStrip1.Location = new System.Drawing.Point(62, 1);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(615, 46);
+            this.menuStrip1.Size = new System.Drawing.Size(606, 38);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,8 +71,9 @@ namespace ProjetoAgenciaTI11T.View
             // 
             this.arquivoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(77, 42);
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 34);
             this.arquivoToolStripMenuItem.Text = "Sair";
+            this.arquivoToolStripMenuItem.Click += new System.EventHandler(this.arquivoToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
@@ -80,19 +81,20 @@ namespace ProjetoAgenciaTI11T.View
             this.cadastrarToolStripMenuItem,
             this.pesquisarToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(117, 42);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(92, 34);
             this.clienteToolStripMenuItem.Text = "Cliente";
             // 
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(225, 42);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(225, 42);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
             // 
             // funcionárioToolStripMenuItem
@@ -101,19 +103,20 @@ namespace ProjetoAgenciaTI11T.View
             this.cadastrarToolStripMenuItem1,
             this.pesquisarToolStripMenuItem1});
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
-            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(176, 42);
+            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(137, 34);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
             // 
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(225, 42);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 34);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
             // pesquisarToolStripMenuItem1
             // 
             this.pesquisarToolStripMenuItem1.Name = "pesquisarToolStripMenuItem1";
-            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(225, 42);
+            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(178, 34);
             this.pesquisarToolStripMenuItem1.Text = "Pesquisar";
             // 
             // pacotesToolStripMenuItem
@@ -122,19 +125,20 @@ namespace ProjetoAgenciaTI11T.View
             this.cadastrarToolStripMenuItem2,
             this.pesquisarToolStripMenuItem2});
             this.pacotesToolStripMenuItem.Name = "pacotesToolStripMenuItem";
-            this.pacotesToolStripMenuItem.Size = new System.Drawing.Size(125, 42);
+            this.pacotesToolStripMenuItem.Size = new System.Drawing.Size(98, 34);
             this.pacotesToolStripMenuItem.Text = "Pacotes";
             // 
             // cadastrarToolStripMenuItem2
             // 
             this.cadastrarToolStripMenuItem2.Name = "cadastrarToolStripMenuItem2";
-            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(225, 42);
+            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(180, 34);
             this.cadastrarToolStripMenuItem2.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem2.Click += new System.EventHandler(this.cadastrarToolStripMenuItem2_Click);
             // 
             // pesquisarToolStripMenuItem2
             // 
             this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
-            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(225, 42);
+            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(178, 34);
             this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
             // 
             // vendaToolStripMenuItem
@@ -143,45 +147,49 @@ namespace ProjetoAgenciaTI11T.View
             this.registrarToolStripMenuItem,
             this.pesquisarToolStripMenuItem3});
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(107, 42);
+            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(86, 34);
             this.vendaToolStripMenuItem.Text = "Venda";
             // 
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(225, 42);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(176, 34);
             this.registrarToolStripMenuItem.Text = "Registrar";
             // 
             // pesquisarToolStripMenuItem3
             // 
             this.pesquisarToolStripMenuItem3.Name = "pesquisarToolStripMenuItem3";
-            this.pesquisarToolStripMenuItem3.Size = new System.Drawing.Size(225, 42);
+            this.pesquisarToolStripMenuItem3.Size = new System.Drawing.Size(176, 34);
             this.pesquisarToolStripMenuItem3.Text = "Pesquisar";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 382);
+            this.pictureBox1.Size = new System.Drawing.Size(679, 286);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Gerenciador de Viagens";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
