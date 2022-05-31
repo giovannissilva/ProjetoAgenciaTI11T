@@ -16,5 +16,16 @@ namespace ProjetoAgenciaTI11T.View
         {
             InitializeComponent();
         }
+
+        private void btnSalvarCliente_Click(object sender, EventArgs e)
+        {
+            if(tbxNomeCliente.Text == "" | tbxEmailCliente.Text == "" | tbxSenhaCliente.Text == "" | pictureBoxFotoCliente.Image == null  )
+            {
+                MessageBox.Show("Preencha todas as informações Corretamente.","Atenção",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+
+
+
+        }
     }
 }
