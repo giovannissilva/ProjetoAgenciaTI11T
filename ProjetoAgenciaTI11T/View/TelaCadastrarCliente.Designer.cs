@@ -40,6 +40,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscarImagem = new System.Windows.Forms.Button();
             this.pictureBoxFotoCliente = new System.Windows.Forms.PictureBox();
             this.btnSalvarCliente = new System.Windows.Forms.Button();
+            this.openFileDialogImagem = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +118,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscarImagem.TabIndex = 7;
             this.btnBuscarImagem.Text = "Buscar Imagem";
             this.btnBuscarImagem.UseVisualStyleBackColor = true;
+            this.btnBuscarImagem.Click += new System.EventHandler(this.btnBuscarImagem_Click);
             // 
             // pictureBoxFotoCliente
             // 
@@ -158,11 +160,13 @@ namespace ProjetoAgenciaTI11T.View
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "TelaCadastrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Agência de Viagens - Cadastrar Cliente";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelaCadastrarCliente_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -181,5 +185,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Button btnBuscarImagem;
         private System.Windows.Forms.PictureBox pictureBoxFotoCliente;
         private System.Windows.Forms.Button btnSalvarCliente;
+        private System.Windows.Forms.OpenFileDialog openFileDialogImagem;
     }
 }
