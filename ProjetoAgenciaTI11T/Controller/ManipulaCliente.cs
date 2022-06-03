@@ -23,9 +23,9 @@ namespace ProjetoAgenciaTI11T.Controller
                 cmd.Parameters.AddWithValue("@nomeCli",Clientes.NomeCliente);
                 cmd.Parameters.AddWithValue("@emailCli",Clientes.EmailCliente);
                 cmd.Parameters.AddWithValue("@senhaCli",Clientes.SenhaCliente);
-                cmd.Parameters.AddWithValue("@imagemCli",Clientes.ImagemCliente);
+                cmd.Parameters.AddWithValue("@imgCli",Clientes.ImagemCliente);
 
-                SqlParameter nv = cmd.Parameters.AddWithValue("@codigoCli", SqlDbType.Int);
+                SqlParameter nv = cmd.Parameters.AddWithValue("@codCli", SqlDbType.Int);
                 nv.Direction = ParameterDirection.Output;
 
                 cn.Open();
