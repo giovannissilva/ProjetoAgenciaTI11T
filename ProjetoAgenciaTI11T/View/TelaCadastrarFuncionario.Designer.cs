@@ -109,6 +109,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnSalvarFuncionario.TabIndex = 8;
             this.btnSalvarFuncionario.Text = "Salvar";
             this.btnSalvarFuncionario.UseVisualStyleBackColor = true;
+            this.btnSalvarFuncionario.Click += new System.EventHandler(this.btnSalvarFuncionario_Click);
             // 
             // TelaCadastrarFuncionario
             // 

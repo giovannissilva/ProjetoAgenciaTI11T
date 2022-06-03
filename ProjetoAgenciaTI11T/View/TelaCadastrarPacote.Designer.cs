@@ -37,15 +37,16 @@ namespace ProjetoAgenciaTI11T.View
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.cbxDestino = new System.Windows.Forms.ComboBox();
+            this.cbxOrigem = new System.Windows.Forms.ComboBox();
+            this.rtbDescricao = new System.Windows.Forms.RichTextBox();
+            this.dateIda = new System.Windows.Forms.DateTimePicker();
+            this.dateVolta = new System.Windows.Forms.DateTimePicker();
+            this.mtbValor = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SalvarImagem = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@ namespace ProjetoAgenciaTI11T.View
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(31, 334);
+            this.label2.Location = new System.Drawing.Point(21, 251);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 21);
@@ -97,18 +98,19 @@ namespace ProjetoAgenciaTI11T.View
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(31, 267);
+            this.label5.Location = new System.Drawing.Point(21, 181);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 21);
             this.label5.TabIndex = 4;
             this.label5.Text = "Data Ida:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(319, 275);
+            this.label6.Location = new System.Drawing.Point(21, 215);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 21);
@@ -119,59 +121,71 @@ namespace ProjetoAgenciaTI11T.View
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(21, 192);
+            this.label7.Location = new System.Drawing.Point(11, 299);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "Descrição:";
             // 
-            // comboBox1
+            // cbxDestino
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 100);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(246, 29);
-            this.comboBox1.TabIndex = 9;
+            this.cbxDestino.FormattingEnabled = true;
+            this.cbxDestino.Items.AddRange(new object[] {
+            "Osasco",
+            "São Paulo",
+            "Rio de Janeiro"});
+            this.cbxDestino.Location = new System.Drawing.Point(130, 100);
+            this.cbxDestino.Name = "cbxDestino";
+            this.cbxDestino.Size = new System.Drawing.Size(246, 29);
+            this.cbxDestino.TabIndex = 9;
+            this.cbxDestino.SelectedIndexChanged += new System.EventHandler(this.cbxDestino_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cbxOrigem
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(101, 141);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(246, 29);
-            this.comboBox2.TabIndex = 10;
+            this.cbxOrigem.FormattingEnabled = true;
+            this.cbxOrigem.Items.AddRange(new object[] {
+            "Osasco",
+            "São Paulo",
+            "Rio de Janeiro",
+            "Paris",
+            "Washington",
+            "Nova Iorque"});
+            this.cbxOrigem.Location = new System.Drawing.Point(130, 141);
+            this.cbxOrigem.Name = "cbxOrigem";
+            this.cbxOrigem.Size = new System.Drawing.Size(246, 29);
+            this.cbxOrigem.TabIndex = 10;
             // 
-            // richTextBox1
+            // rtbDescricao
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(116, 189);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(253, 50);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.rtbDescricao.Location = new System.Drawing.Point(123, 283);
+            this.rtbDescricao.Name = "rtbDescricao";
+            this.rtbDescricao.Size = new System.Drawing.Size(253, 50);
+            this.rtbDescricao.TabIndex = 11;
+            this.rtbDescricao.Text = "";
             // 
-            // dateTimePicker1
+            // dateIda
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(109, 267);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(130, 29);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateIda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateIda.Location = new System.Drawing.Point(130, 174);
+            this.dateIda.Name = "dateIda";
+            this.dateIda.Size = new System.Drawing.Size(130, 29);
+            this.dateIda.TabIndex = 12;
             // 
-            // dateTimePicker2
+            // dateVolta
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(413, 273);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(130, 29);
-            this.dateTimePicker2.TabIndex = 13;
+            this.dateVolta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateVolta.Location = new System.Drawing.Point(130, 209);
+            this.dateVolta.Name = "dateVolta";
+            this.dateVolta.Size = new System.Drawing.Size(130, 29);
+            this.dateVolta.TabIndex = 13;
             // 
-            // maskedTextBox1
+            // mtbValor
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(93, 331);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(161, 29);
-            this.maskedTextBox1.TabIndex = 14;
+            this.mtbValor.Location = new System.Drawing.Point(130, 248);
+            this.mtbValor.Name = "mtbValor";
+            this.mtbValor.Size = new System.Drawing.Size(161, 29);
+            this.mtbValor.TabIndex = 14;
             // 
             // pictureBox1
             // 
@@ -181,24 +195,30 @@ namespace ProjetoAgenciaTI11T.View
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // SalvarImagem
             // 
-            this.button1.Location = new System.Drawing.Point(510, 345);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 30);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SalvarImagem.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SalvarImagem.Location = new System.Drawing.Point(481, 233);
+            this.SalvarImagem.Name = "SalvarImagem";
+            this.SalvarImagem.Size = new System.Drawing.Size(101, 21);
+            this.SalvarImagem.TabIndex = 17;
+            this.SalvarImagem.Text = "Buscar Imagem";
+            this.SalvarImagem.UseVisualStyleBackColor = true;
+            this.SalvarImagem.Click += new System.EventHandler(this.SalvarImagem_Click);
             // 
-            // button2
+            // openFileDialog1
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(481, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 21);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Buscar Imagem";
-            this.button2.UseVisualStyleBackColor = true;
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(481, 310);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(101, 37);
+            this.btnSalvar.TabIndex = 18;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // TelaCadastrarPacote
             // 
@@ -207,15 +227,15 @@ namespace ProjetoAgenciaTI11T.View
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(681, 397);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.SalvarImagem);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.mtbValor);
+            this.Controls.Add(this.dateVolta);
+            this.Controls.Add(this.dateIda);
+            this.Controls.Add(this.rtbDescricao);
+            this.Controls.Add(this.cbxOrigem);
+            this.Controls.Add(this.cbxDestino);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -245,14 +265,15 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.ComboBox cbxDestino;
+        private System.Windows.Forms.ComboBox cbxOrigem;
+        private System.Windows.Forms.RichTextBox rtbDescricao;
+        private System.Windows.Forms.DateTimePicker dateIda;
+        private System.Windows.Forms.DateTimePicker dateVolta;
+        private System.Windows.Forms.MaskedTextBox mtbValor;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button SalvarImagem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

@@ -95,5 +95,10 @@ namespace ProjetoAgenciaTI11T.View
                 }
             }
         }
+
+        private void tbxNomeCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
