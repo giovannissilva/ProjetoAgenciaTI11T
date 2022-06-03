@@ -47,74 +47,74 @@ namespace ProjetoAgenciaTI11T.View
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(185, 35);
+            this.label1.Location = new System.Drawing.Point(131, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(360, 50);
+            this.label1.Size = new System.Drawing.Size(284, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Cliente";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(27, 120);
+            this.label2.Location = new System.Drawing.Point(25, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 28);
+            this.label2.Size = new System.Drawing.Size(61, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(26, 167);
+            this.label3.Location = new System.Drawing.Point(22, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 28);
+            this.label3.Size = new System.Drawing.Size(63, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "E-mail:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(30, 217);
+            this.label4.Location = new System.Drawing.Point(25, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 28);
+            this.label4.Size = new System.Drawing.Size(61, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Senha:";
             // 
             // tbxNomeCliente
             // 
-            this.tbxNomeCliente.Location = new System.Drawing.Point(122, 123);
-            this.tbxNomeCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxNomeCliente.Location = new System.Drawing.Point(107, 139);
             this.tbxNomeCliente.Name = "tbxNomeCliente";
-            this.tbxNomeCliente.Size = new System.Drawing.Size(351, 27);
+            this.tbxNomeCliente.Size = new System.Drawing.Size(308, 23);
             this.tbxNomeCliente.TabIndex = 4;
             // 
             // tbxEmailCliente
             // 
-            this.tbxEmailCliente.Location = new System.Drawing.Point(122, 169);
-            this.tbxEmailCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxEmailCliente.Location = new System.Drawing.Point(107, 180);
             this.tbxEmailCliente.Name = "tbxEmailCliente";
-            this.tbxEmailCliente.Size = new System.Drawing.Size(351, 27);
+            this.tbxEmailCliente.Size = new System.Drawing.Size(308, 23);
             this.tbxEmailCliente.TabIndex = 5;
             // 
             // tbxSenhaCliente
             // 
-            this.tbxSenhaCliente.Location = new System.Drawing.Point(122, 219);
-            this.tbxSenhaCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxSenhaCliente.Location = new System.Drawing.Point(107, 222);
             this.tbxSenhaCliente.Name = "tbxSenhaCliente";
-            this.tbxSenhaCliente.Size = new System.Drawing.Size(154, 27);
+            this.tbxSenhaCliente.Size = new System.Drawing.Size(135, 23);
             this.tbxSenhaCliente.TabIndex = 6;
             // 
             // btnBuscarImagem
             // 
             this.btnBuscarImagem.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBuscarImagem.Location = new System.Drawing.Point(513, 252);
-            this.btnBuscarImagem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBuscarImagem.Location = new System.Drawing.Point(492, 223);
             this.btnBuscarImagem.Name = "btnBuscarImagem";
-            this.btnBuscarImagem.Size = new System.Drawing.Size(110, 28);
+            this.btnBuscarImagem.Size = new System.Drawing.Size(96, 21);
             this.btnBuscarImagem.TabIndex = 7;
             this.btnBuscarImagem.Text = "Buscar Imagem";
             this.btnBuscarImagem.UseVisualStyleBackColor = true;
@@ -123,20 +123,18 @@ namespace ProjetoAgenciaTI11T.View
             // pictureBoxFotoCliente
             // 
             this.pictureBoxFotoCliente.BackColor = System.Drawing.Color.Silver;
-            this.pictureBoxFotoCliente.Location = new System.Drawing.Point(498, 120);
-            this.pictureBoxFotoCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxFotoCliente.Location = new System.Drawing.Point(481, 90);
             this.pictureBoxFotoCliente.Name = "pictureBoxFotoCliente";
-            this.pictureBoxFotoCliente.Size = new System.Drawing.Size(142, 124);
+            this.pictureBoxFotoCliente.Size = new System.Drawing.Size(124, 93);
             this.pictureBoxFotoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxFotoCliente.TabIndex = 8;
             this.pictureBoxFotoCliente.TabStop = false;
             // 
             // btnSalvarCliente
             // 
-            this.btnSalvarCliente.Location = new System.Drawing.Point(280, 303);
-            this.btnSalvarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSalvarCliente.Location = new System.Drawing.Point(619, 347);
             this.btnSalvarCliente.Name = "btnSalvarCliente";
-            this.btnSalvarCliente.Size = new System.Drawing.Size(91, 40);
+            this.btnSalvarCliente.Size = new System.Drawing.Size(80, 30);
             this.btnSalvarCliente.TabIndex = 10;
             this.btnSalvarCliente.Text = "Salvar";
             this.btnSalvarCliente.UseVisualStyleBackColor = true;
@@ -144,11 +142,13 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // TelaCadastrarCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(677, 381);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(711, 399);
             this.Controls.Add(this.btnSalvarCliente);
             this.Controls.Add(this.pictureBoxFotoCliente);
             this.Controls.Add(this.btnBuscarImagem);
@@ -161,7 +161,6 @@ namespace ProjetoAgenciaTI11T.View
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "TelaCadastrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

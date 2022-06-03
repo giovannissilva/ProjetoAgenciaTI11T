@@ -53,6 +53,7 @@ namespace ProjetoAgenciaTI11T.View
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(93, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -64,8 +65,9 @@ namespace ProjetoAgenciaTI11T.View
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(21, 251);
+            this.label2.Location = new System.Drawing.Point(21, 277);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 21);
@@ -75,6 +77,7 @@ namespace ProjetoAgenciaTI11T.View
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(21, 144);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -86,8 +89,9 @@ namespace ProjetoAgenciaTI11T.View
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(21, 103);
+            this.label4.Location = new System.Drawing.Point(21, 98);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 21);
@@ -97,8 +101,9 @@ namespace ProjetoAgenciaTI11T.View
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(21, 181);
+            this.label5.Location = new System.Drawing.Point(21, 187);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 21);
@@ -109,8 +114,9 @@ namespace ProjetoAgenciaTI11T.View
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(21, 215);
+            this.label6.Location = new System.Drawing.Point(21, 231);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 21);
@@ -120,8 +126,9 @@ namespace ProjetoAgenciaTI11T.View
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(11, 299);
+            this.label7.Location = new System.Drawing.Point(13, 321);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 21);
@@ -135,7 +142,7 @@ namespace ProjetoAgenciaTI11T.View
             "Osasco",
             "São Paulo",
             "Rio de Janeiro"});
-            this.cbxDestino.Location = new System.Drawing.Point(130, 100);
+            this.cbxDestino.Location = new System.Drawing.Point(130, 95);
             this.cbxDestino.Name = "cbxDestino";
             this.cbxDestino.Size = new System.Drawing.Size(246, 29);
             this.cbxDestino.TabIndex = 9;
@@ -158,7 +165,7 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // rtbDescricao
             // 
-            this.rtbDescricao.Location = new System.Drawing.Point(123, 283);
+            this.rtbDescricao.Location = new System.Drawing.Point(123, 318);
             this.rtbDescricao.Name = "rtbDescricao";
             this.rtbDescricao.Size = new System.Drawing.Size(253, 50);
             this.rtbDescricao.TabIndex = 11;
@@ -167,7 +174,7 @@ namespace ProjetoAgenciaTI11T.View
             // dateIda
             // 
             this.dateIda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateIda.Location = new System.Drawing.Point(130, 174);
+            this.dateIda.Location = new System.Drawing.Point(130, 181);
             this.dateIda.Name = "dateIda";
             this.dateIda.Size = new System.Drawing.Size(130, 29);
             this.dateIda.TabIndex = 12;
@@ -175,21 +182,21 @@ namespace ProjetoAgenciaTI11T.View
             // dateVolta
             // 
             this.dateVolta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateVolta.Location = new System.Drawing.Point(130, 209);
+            this.dateVolta.Location = new System.Drawing.Point(130, 223);
             this.dateVolta.Name = "dateVolta";
             this.dateVolta.Size = new System.Drawing.Size(130, 29);
             this.dateVolta.TabIndex = 13;
             // 
             // mtbValor
             // 
-            this.mtbValor.Location = new System.Drawing.Point(130, 248);
+            this.mtbValor.Location = new System.Drawing.Point(130, 274);
             this.mtbValor.Name = "mtbValor";
             this.mtbValor.Size = new System.Drawing.Size(161, 29);
             this.mtbValor.TabIndex = 14;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(427, 100);
+            this.pictureBox1.Location = new System.Drawing.Point(467, 88);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(224, 127);
             this.pictureBox1.TabIndex = 15;
@@ -198,7 +205,7 @@ namespace ProjetoAgenciaTI11T.View
             // SalvarImagem
             // 
             this.SalvarImagem.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SalvarImagem.Location = new System.Drawing.Point(481, 233);
+            this.SalvarImagem.Location = new System.Drawing.Point(530, 232);
             this.SalvarImagem.Name = "SalvarImagem";
             this.SalvarImagem.Size = new System.Drawing.Size(101, 21);
             this.SalvarImagem.TabIndex = 17;
@@ -212,7 +219,7 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(481, 310);
+            this.btnSalvar.Location = new System.Drawing.Point(599, 334);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(101, 37);
             this.btnSalvar.TabIndex = 18;
@@ -226,7 +233,8 @@ namespace ProjetoAgenciaTI11T.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(681, 397);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(712, 400);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.SalvarImagem);
             this.Controls.Add(this.pictureBox1);

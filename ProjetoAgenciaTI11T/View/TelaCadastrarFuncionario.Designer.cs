@@ -43,8 +43,9 @@ namespace ProjetoAgenciaTI11T.View
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(70, 40);
+            this.label1.Location = new System.Drawing.Point(135, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(352, 40);
             this.label1.TabIndex = 1;
@@ -53,8 +54,9 @@ namespace ProjetoAgenciaTI11T.View
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(68, 114);
+            this.label2.Location = new System.Drawing.Point(31, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 21);
             this.label2.TabIndex = 2;
@@ -63,8 +65,9 @@ namespace ProjetoAgenciaTI11T.View
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(70, 157);
+            this.label3.Location = new System.Drawing.Point(29, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 21);
             this.label3.TabIndex = 3;
@@ -73,8 +76,9 @@ namespace ProjetoAgenciaTI11T.View
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(70, 200);
+            this.label4.Location = new System.Drawing.Point(31, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 21);
             this.label4.TabIndex = 4;
@@ -82,28 +86,28 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // tbxNomeFuncionario
             // 
-            this.tbxNomeFuncionario.Location = new System.Drawing.Point(135, 116);
+            this.tbxNomeFuncionario.Location = new System.Drawing.Point(117, 147);
             this.tbxNomeFuncionario.Name = "tbxNomeFuncionario";
             this.tbxNomeFuncionario.Size = new System.Drawing.Size(287, 23);
             this.tbxNomeFuncionario.TabIndex = 5;
             // 
             // tbxEmailFuncionario
             // 
-            this.tbxEmailFuncionario.Location = new System.Drawing.Point(135, 157);
+            this.tbxEmailFuncionario.Location = new System.Drawing.Point(117, 185);
             this.tbxEmailFuncionario.Name = "tbxEmailFuncionario";
             this.tbxEmailFuncionario.Size = new System.Drawing.Size(287, 23);
             this.tbxEmailFuncionario.TabIndex = 6;
             // 
             // tbxSenhaFuncionario
             // 
-            this.tbxSenhaFuncionario.Location = new System.Drawing.Point(137, 198);
+            this.tbxSenhaFuncionario.Location = new System.Drawing.Point(117, 222);
             this.tbxSenhaFuncionario.Name = "tbxSenhaFuncionario";
             this.tbxSenhaFuncionario.Size = new System.Drawing.Size(161, 23);
             this.tbxSenhaFuncionario.TabIndex = 7;
             // 
             // btnSalvarFuncionario
             // 
-            this.btnSalvarFuncionario.Location = new System.Drawing.Point(359, 245);
+            this.btnSalvarFuncionario.Location = new System.Drawing.Point(620, 345);
             this.btnSalvarFuncionario.Name = "btnSalvarFuncionario";
             this.btnSalvarFuncionario.Size = new System.Drawing.Size(80, 30);
             this.btnSalvarFuncionario.TabIndex = 8;
@@ -117,7 +121,8 @@ namespace ProjetoAgenciaTI11T.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(492, 306);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(712, 402);
             this.Controls.Add(this.btnSalvarFuncionario);
             this.Controls.Add(this.tbxSenhaFuncionario);
             this.Controls.Add(this.tbxEmailFuncionario);
