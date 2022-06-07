@@ -51,5 +51,116 @@ namespace ProjetoAgenciaTI11T.Controller
 
 
         }
+        public void pesquisarCodigoFun()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pPesquisarCodFun", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                cmd.Parameters.AddWithValue("@CodigoFun", Funcionario.CodigoFun);
+                cn.Open();
+
+                var arrayDados = cmd.ExecuteReader();
+
+                if (arrayDados.Read())
+                {
+                    Funcionario.CodigoFun = Convert.ToInt32(arrayDados["codigoCli"]);
+                    Funcionario.NomeFun = arrayDados["nomeFun"].ToString();
+                    Funcionario.EmailFun = arrayDados["emailFun"].ToString();
+                    Funcionario.Senha = arrayDados["senha"].ToString();
+                    Funcionario.Retorno = "Sim";
+                }
+                else
+                {
+                    MessageBox.Show("Código não localizado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Funcionario.Retorno = "Não";
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void deletarFun()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pDeletarFun", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                cmd.Parameters.AddWithValue("@codigoFun", Funcionario.CodigoFun);
+                cn.Open();
+                cmd.ExecuteReader();
+                MessageBox.Show("Funcionario excluido com sucesso", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("O Funcionario não pode ser excluido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            finally
+            {
+                if (cn.State != ConnectionState.Closed)
+                {
+                    cn.Close();
+                }
+            }
+        }
+        public void alterarFun()
+        {
+
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("AlterarFun", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                cmd.Parameters.AddWithValue("@codigoFun", Funcionario.CodigoFun);
+                cmd.Parameters.AddWithValue("@nomeFun", Funcionario.NomeFun);
+                cmd.Parameters.AddWithValue("@emailFun", Funcionario.EmailFun);
+                cmd.Parameters.AddWithValue("@senha", Funcionario.Senha);
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Funcionario alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("O Funcionario não pode ser excluido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            finally
+            {
+                if (cn.State != ConnectionState.Closed)
+                {
+                    cn.Close();
+                }
+            }
+        }
+        public static BindingSource pesquisarNomeFun()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pPesquisarNomeFun", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@nomeFun", Funcionario.NomeFun);
+            cn.Open();
+            cmd.ExecuteReader();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+
+            DataTable table = new DataTable();
+
+            sqlData.Fill(table);
+
+            BindingSource dados = new BindingSource();
+            dados.DataSource = table;
+
+            return dados;
+
+        }
     }
 }
