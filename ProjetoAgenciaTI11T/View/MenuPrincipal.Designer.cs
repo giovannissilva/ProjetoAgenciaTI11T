@@ -63,7 +63,7 @@ namespace ProjetoAgenciaTI11T.View
             this.vendaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(62, 1);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(486, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(606, 38);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -87,15 +87,16 @@ namespace ProjetoAgenciaTI11T.View
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(178, 34);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(178, 34);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.pesquisarToolStripMenuItem_Click);
             // 
             // funcionárioToolStripMenuItem
             // 

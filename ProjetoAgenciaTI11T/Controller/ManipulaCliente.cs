@@ -56,23 +56,23 @@ namespace ProjetoAgenciaTI11T.Controller
         public void pesquisarCodigoCliente()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisarCodCliente", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisaCodCliente", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             try
             {
-                cmd.Parameters.AddWithValue("@codigoCli", Clientes.CodigoCliente);
+                cmd.Parameters.AddWithValue("@codCli", Clientes.CodigoCliente);
                 cn.Open();
 
                 var arrayDados = cmd.ExecuteReader();
 
                 if (arrayDados.Read())
                 {
-                    Clientes.CodigoCliente = Convert.ToInt32(arrayDados["codigoCli"]);
+                    Clientes.CodigoCliente = Convert.ToInt32(arrayDados["codCli"]);
                     Clientes.NomeCliente = arrayDados["nomeCli"].ToString();
                     Clientes.EmailCliente = arrayDados["emailCli"].ToString();
                     Clientes.SenhaCliente = arrayDados["senhaCli"].ToString();
-                    Clientes.ImagemCliente = (System.Array)arrayDados["imagemCli"];
+                    Clientes.ImagemCliente = (System.Array)arrayDados["imgCli"];
                     Clientes.Retorno = "Sim";
                 }
                 else
