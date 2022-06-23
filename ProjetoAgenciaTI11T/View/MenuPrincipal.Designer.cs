@@ -87,14 +87,14 @@ namespace ProjetoAgenciaTI11T.View
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(178, 34);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(178, 34);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.pesquisarToolStripMenuItem_Click);
             // 
@@ -119,6 +119,7 @@ namespace ProjetoAgenciaTI11T.View
             this.pesquisarToolStripMenuItem1.Name = "pesquisarToolStripMenuItem1";
             this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(178, 34);
             this.pesquisarToolStripMenuItem1.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem1.Click += new System.EventHandler(this.pesquisarToolStripMenuItem1_Click);
             // 
             // pacotesToolStripMenuItem
             // 
@@ -132,15 +133,16 @@ namespace ProjetoAgenciaTI11T.View
             // cadastrarToolStripMenuItem2
             // 
             this.cadastrarToolStripMenuItem2.Name = "cadastrarToolStripMenuItem2";
-            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(178, 34);
+            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(180, 34);
             this.cadastrarToolStripMenuItem2.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem2.Click += new System.EventHandler(this.cadastrarToolStripMenuItem2_Click);
             // 
             // pesquisarToolStripMenuItem2
             // 
             this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
-            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(178, 34);
+            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(180, 34);
             this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem2.Click += new System.EventHandler(this.pesquisarToolStripMenuItem2_Click);
             // 
             // vendaToolStripMenuItem
             // 

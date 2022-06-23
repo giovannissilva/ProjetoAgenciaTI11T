@@ -60,5 +60,17 @@ namespace ProjetoAgenciaTI11T.View
             TelaPesquisarCliente telaPesquisarCliente = new TelaPesquisarCliente();
             telaPesquisarCliente.Show();
         }
+
+        private void pesquisarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaPesquisarFuncionario telaPesquisarFuncionario = new TelaPesquisarFuncionario();
+            telaPesquisarFuncionario.Show();
+        }
+
+        private void pesquisarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            TelaPesquisarPacote telaPesquisarPacote = new TelaPesquisarPacote();
+            telaPesquisarPacote.Show();
+        }
     }
 }

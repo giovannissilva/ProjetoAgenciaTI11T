@@ -59,25 +59,26 @@ namespace ProjetoAgenciaTI11T.Controller
         public void pesquisarCodigoPac()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisarCodPac", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisaCodPac", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             try
             {
-                cmd.Parameters.AddWithValue("@codigoPac", Pacotes.CodigoPacote);
+                cmd.Parameters.AddWithValue("@codPac", Pacotes.CodigoPacote);
                 cn.Open();
 
                 var arrayDados = cmd.ExecuteReader();
 
                 if (arrayDados.Read())
                 {
-                    Pacotes.CodigoPacote = Convert.ToInt32(arrayDados["codigoPac"]);
+                    Pacotes.CodigoPacote = Convert.ToInt32(arrayDados["codPac"]);
                     Pacotes.ValorPacote = Convert.ToDecimal(arrayDados["valorPac"]);
                     Pacotes.OrigimPacote = arrayDados["origemPac"].ToString();
-                    Pacotes.DescricaoPacote = arrayDados["destinoPac"].ToString();
+                    Pacotes.DestinoPacote = arrayDados["destinoPac"].ToString();
+                    Pacotes.DescricaoPacote = arrayDados["descPac"].ToString();
                     Pacotes.DataPacoteIda =  Convert.ToDateTime(arrayDados["dataPacIda"]);
                     Pacotes.DataPacoteVolta = Convert.ToDateTime(arrayDados["dataPacVolta"]);
-                    Pacotes.ImagemPacote = (System.Array)arrayDados["imagemCli"];
+                    Pacotes.ImagemPacote = (System.Array)arrayDados["imgPac"];
                     Pacotes.Retorno = "Sim";
                 }
                 else
