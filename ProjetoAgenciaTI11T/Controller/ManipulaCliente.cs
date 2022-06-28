@@ -94,7 +94,7 @@ namespace ProjetoAgenciaTI11T.Controller
         cmd.CommandType = CommandType.StoredProcedure;
         try
         {
-            cmd.Parameters.AddWithValue("@codigoCli", Clientes.CodigoCliente);
+            cmd.Parameters.AddWithValue("@codCli", Clientes.CodigoCliente);
             cn.Open();
             cmd.ExecuteReader();
             MessageBox.Show("Cliente excluido com sucesso", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -117,15 +117,15 @@ namespace ProjetoAgenciaTI11T.Controller
         {
 
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("AlterarCliente", cn);
+            SqlCommand cmd = new SqlCommand("pAlterarCliente", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             try
             {
-                cmd.Parameters.AddWithValue("@codigoCli", Clientes.CodigoCliente);
+                cmd.Parameters.AddWithValue("@codCli", Clientes.CodigoCliente);
                 cmd.Parameters.AddWithValue("@nomeCli", Clientes.NomeCliente);
                 cmd.Parameters.AddWithValue("@emailCli", Clientes.EmailCliente);
                 cmd.Parameters.AddWithValue("@senhaCli", Clientes.SenhaCliente);
-                cmd.Parameters.AddWithValue("@imagemCli", Clientes.ImagemCliente);
+                cmd.Parameters.AddWithValue("@imgCli", Clientes.ImagemCliente);
 
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -133,7 +133,7 @@ namespace ProjetoAgenciaTI11T.Controller
             }
             catch (Exception)
             {
-                MessageBox.Show("O Cliente não pode ser excluido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("O Cliente não pode ser Alterado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
             finally

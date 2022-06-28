@@ -100,7 +100,7 @@ namespace ProjetoAgenciaTI11T.Controller
             cmd.CommandType = CommandType.StoredProcedure;
             try
             {
-                cmd.Parameters.AddWithValue("@codigoPac", Pacotes.CodigoPacote);
+                cmd.Parameters.AddWithValue("@codPac", Pacotes.CodigoPacote);
                 cn.Open();
                 cmd.ExecuteReader();
                 MessageBox.Show("Pacotes excluido com sucesso", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -123,16 +123,17 @@ namespace ProjetoAgenciaTI11T.Controller
         {
 
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("AlterarPac", cn);
+            SqlCommand cmd = new SqlCommand("pAlterarPac", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             try
             {
+                cmd.Parameters.AddWithValue("@codPac", Pacotes.CodigoPacote);
                 cmd.Parameters.AddWithValue("@valorPac", Pacotes.ValorPacote);
                 cmd.Parameters.AddWithValue("@origemPac", Pacotes.OrigimPacote);
                 cmd.Parameters.AddWithValue("@destinoPac", Pacotes.DestinoPacote);
                 cmd.Parameters.AddWithValue("@dataPacIda", Pacotes.DataPacoteIda);
                 cmd.Parameters.AddWithValue("@dataPacVolta", Pacotes.DataPacoteVolta);
-                cmd.Parameters.AddWithValue("@desPac", Pacotes.DescricaoPacote);
+                cmd.Parameters.AddWithValue("@descPac", Pacotes.DescricaoPacote);
                 cmd.Parameters.AddWithValue("@imgPac", Pacotes.ImagemPacote);
 
                 cn.Open();
@@ -141,7 +142,7 @@ namespace ProjetoAgenciaTI11T.Controller
             }
             catch (Exception)
             {
-                MessageBox.Show("O Pacotes não pode ser excluido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("O Pacotes não pode ser Alterado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
             finally

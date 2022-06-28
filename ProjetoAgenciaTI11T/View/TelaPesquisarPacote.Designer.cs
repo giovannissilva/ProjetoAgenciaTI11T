@@ -29,6 +29,7 @@ namespace ProjetoAgenciaTI11T.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPesquisarPacote));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnCodPac = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -144,6 +146,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscarImg.TabIndex = 35;
             this.btnBuscarImg.Text = "Buscar Imagem";
             this.btnBuscarImg.UseVisualStyleBackColor = true;
+            this.btnBuscarImg.Click += new System.EventHandler(this.btnBuscarImg_Click);
             // 
             // tbxDestinoPac
             // 
@@ -239,6 +242,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnDeletarCodPac.TabIndex = 24;
             this.btnDeletarCodPac.Text = "Deletar";
             this.btnDeletarCodPac.UseVisualStyleBackColor = true;
+            this.btnDeletarCodPac.Click += new System.EventHandler(this.btnDeletarCodPac_Click);
             // 
             // btnAlterarCodPac
             // 
@@ -249,6 +253,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnAlterarCodPac.TabIndex = 23;
             this.btnAlterarCodPac.Text = "Alterar";
             this.btnAlterarCodPac.UseVisualStyleBackColor = true;
+            this.btnAlterarCodPac.Click += new System.EventHandler(this.btnAlterarCodPac_Click);
             // 
             // tbxCodPac
             // 
@@ -281,12 +286,18 @@ namespace ProjetoAgenciaTI11T.View
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(197, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(271, 45);
             this.label1.TabIndex = 4;
             this.label1.Text = "Pesquisar Pacote";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // TelaPesquisarPacote
             // 
@@ -294,6 +305,7 @@ namespace ProjetoAgenciaTI11T.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(713, 391);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
@@ -334,5 +346,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox rtbDescricaoPac;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

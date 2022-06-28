@@ -45,10 +45,7 @@ namespace ProjetoAgenciaTI11T.View
                 ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();
                 manipulaFuncionario.pesquisarCodigoFun();
 
-                tbxCodFun.Text = Funcionario.CodigoFun.ToString();
-                tbxNomeFun.Text = Funcionario.NomeFun;
-                tbxEmailFun.Text = Funcionario.EmailFun;
-                tbxSenhaFun.Text = Funcionario.Senha;
+               
 
             }
             if (Clientes.Retorno == "Não")
@@ -61,11 +58,84 @@ namespace ProjetoAgenciaTI11T.View
                 tbxSenhaFun.Text = string.Empty;
                 return;
             }
+            else
+            {
+                tbxCodFun.Text = Funcionario.CodigoFun.ToString();
+                tbxNomeFun.Text = Funcionario.NomeFun;
+                tbxEmailFun.Text = Funcionario.EmailFun;
+                tbxSenhaFun.Text = Funcionario.Senha;
+            }
         }
 
         private void TelaPesquisarFuncionario_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAlterarCodFun_Click(object sender, EventArgs e)
+        {
+            if (tbxCodFun.Text == "")
+            {
+                MessageBox.Show("Digite um código do Funcionario", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                tbxCodFun.Text = string.Empty;
+                tbxCodFun.Focus();
+                tbxCodFun.SelectAll();
+                tbxNomeFun.Text = string.Empty;
+                tbxEmailFun.Text = string.Empty;
+                tbxSenhaFun.Text = string.Empty;
+            }
+
+            else
+            {
+                var resposta = MessageBox.Show("Deseja alterar o Funcionario " + tbxCodFun.Text + "?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Funcionario.CodigoFun = Convert.ToInt32(tbxCodFun.Text);
+                    Funcionario.NomeFun = tbxNomeFun.Text;
+                    Funcionario.EmailFun = tbxEmailFun.Text;
+                    Funcionario.Senha = tbxSenhaFun.Text;
+
+                    ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();
+                    manipulaFuncionario.alterarFun();
+                }
+                return;
+            }
+        }
+
+        private void btnDeletarCodFun_Click(object sender, EventArgs e)
+        {
+            if (tbxCodFun.Text == "")
+            {
+                MessageBox.Show("Digite um código do Funcionario", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                tbxCodFun.Text = string.Empty;
+                tbxCodFun.Focus();
+                tbxCodFun.SelectAll();
+                tbxNomeFun.Text = string.Empty;
+                tbxEmailFun.Text = string.Empty;
+                tbxSenhaFun.Text = string.Empty;
+            }
+
+            else
+            {
+                var resposta = MessageBox.Show("Deseja excluir o Funcionario " + tbxCodFun.Text + "?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Clientes.CodigoCliente = Convert.ToInt32(tbxCodFun.Text);
+
+                    ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();
+                    manipulaFuncionario.deletarFun();
+                }
+
+                tbxCodFun.Text = string.Empty;
+                tbxCodFun.Focus();
+                tbxCodFun.SelectAll();
+                tbxNomeFun.Text = string.Empty;
+                tbxEmailFun.Text = string.Empty;
+                tbxSenhaFun.Text = string.Empty;
+                return;
+            }
         }
     }
 }

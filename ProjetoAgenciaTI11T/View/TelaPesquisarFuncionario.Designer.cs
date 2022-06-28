@@ -29,6 +29,7 @@ namespace ProjetoAgenciaTI11T.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPesquisarFuncionario));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -174,6 +175,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnDeletarCodFun.TabIndex = 24;
             this.btnDeletarCodFun.Text = "Deletar";
             this.btnDeletarCodFun.UseVisualStyleBackColor = true;
+            this.btnDeletarCodFun.Click += new System.EventHandler(this.btnDeletarCodFun_Click);
             // 
             // btnAlterarCodFun
             // 
@@ -184,6 +186,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnAlterarCodFun.TabIndex = 23;
             this.btnAlterarCodFun.Text = "Alterar";
             this.btnAlterarCodFun.UseVisualStyleBackColor = true;
+            this.btnAlterarCodFun.Click += new System.EventHandler(this.btnAlterarCodFun_Click);
             // 
             // tbxSenhaFun
             // 
@@ -270,6 +273,7 @@ namespace ProjetoAgenciaTI11T.View
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(197, 13);
             this.label1.Name = "label1";
@@ -284,6 +288,7 @@ namespace ProjetoAgenciaTI11T.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(712, 406);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);

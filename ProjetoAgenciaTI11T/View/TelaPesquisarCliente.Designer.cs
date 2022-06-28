@@ -29,16 +29,21 @@ namespace ProjetoAgenciaTI11T.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPesquisarCliente));
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnBuscaNomeCli = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbxPesquisaNomeCli = new System.Windows.Forms.TextBox();
-            this.tbxCodCli = new System.Windows.Forms.TextBox();
-            this.btnCodCli = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnBuscaNomeCli = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnDeletarCodCli = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBuscarImg = new System.Windows.Forms.Button();
             this.tbxSenhaCli = new System.Windows.Forms.TextBox();
@@ -47,23 +52,21 @@ namespace ProjetoAgenciaTI11T.View
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnAlterarCodCli = new System.Windows.Forms.Button();
-            this.btnDeletarCodCli = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbxCodCli = new System.Windows.Forms.TextBox();
+            this.btnCodCli = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(197, 9);
             this.label1.Name = "label1";
@@ -96,10 +99,73 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage1.Text = "Pesquisar por Nome";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Código,
+            this.Nome,
+            this.Email,
+            this.Foto});
+            this.dataGridView1.Location = new System.Drawing.Point(10, 67);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(665, 200);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // Código
+            // 
+            this.Código.HeaderText = "Código";
+            this.Código.Name = "Código";
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // Foto
+            // 
+            this.Foto.HeaderText = "Foto";
+            this.Foto.Name = "Foto";
+            // 
+            // tbxPesquisaNomeCli
+            // 
+            this.tbxPesquisaNomeCli.Location = new System.Drawing.Point(224, 30);
+            this.tbxPesquisaNomeCli.Name = "tbxPesquisaNomeCli";
+            this.tbxPesquisaNomeCli.Size = new System.Drawing.Size(251, 23);
+            this.tbxPesquisaNomeCli.TabIndex = 3;
+            // 
+            // btnBuscaNomeCli
+            // 
+            this.btnBuscaNomeCli.Location = new System.Drawing.Point(482, 31);
+            this.btnBuscaNomeCli.Name = "btnBuscaNomeCli";
+            this.btnBuscaNomeCli.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscaNomeCli.TabIndex = 2;
+            this.btnBuscaNomeCli.Text = "Buscar";
+            this.btnBuscaNomeCli.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(10, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(208, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Digite o Nome do Cliente:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnAlterar);
             this.tabPage2.Controls.Add(this.btnDeletarCodCli);
-            this.tabPage2.Controls.Add(this.btnAlterarCodCli);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.btnBuscarImg);
             this.tabPage2.Controls.Add(this.tbxSenhaCli);
@@ -119,60 +185,26 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage2.Text = "Pesquisar por Codigo";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnAlterar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(10, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(208, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Digite o Nome do Cliente:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.btnAlterar.Location = new System.Drawing.Point(217, 223);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 25;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // btnBuscaNomeCli
+            // btnDeletarCodCli
             // 
-            this.btnBuscaNomeCli.Location = new System.Drawing.Point(482, 31);
-            this.btnBuscaNomeCli.Name = "btnBuscaNomeCli";
-            this.btnBuscaNomeCli.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscaNomeCli.TabIndex = 2;
-            this.btnBuscaNomeCli.Text = "Buscar";
-            this.btnBuscaNomeCli.UseVisualStyleBackColor = true;
-            // 
-            // tbxPesquisaNomeCli
-            // 
-            this.tbxPesquisaNomeCli.Location = new System.Drawing.Point(224, 30);
-            this.tbxPesquisaNomeCli.Name = "tbxPesquisaNomeCli";
-            this.tbxPesquisaNomeCli.Size = new System.Drawing.Size(251, 23);
-            this.tbxPesquisaNomeCli.TabIndex = 3;
-            // 
-            // tbxCodCli
-            // 
-            this.tbxCodCli.Location = new System.Drawing.Point(230, 21);
-            this.tbxCodCli.Name = "tbxCodCli";
-            this.tbxCodCli.Size = new System.Drawing.Size(251, 23);
-            this.tbxCodCli.TabIndex = 6;
-            // 
-            // btnCodCli
-            // 
-            this.btnCodCli.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCodCli.Location = new System.Drawing.Point(487, 21);
-            this.btnCodCli.Name = "btnCodCli";
-            this.btnCodCli.Size = new System.Drawing.Size(75, 23);
-            this.btnCodCli.TabIndex = 5;
-            this.btnCodCli.Text = "Buscar";
-            this.btnCodCli.UseVisualStyleBackColor = true;
-            this.btnCodCli.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(8, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 21);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Digite o Codigo do Cliente:";
+            this.btnDeletarCodCli.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDeletarCodCli.Location = new System.Drawing.Point(323, 223);
+            this.btnDeletarCodCli.Name = "btnDeletarCodCli";
+            this.btnDeletarCodCli.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletarCodCli.TabIndex = 24;
+            this.btnDeletarCodCli.Text = "Deletar";
+            this.btnDeletarCodCli.UseVisualStyleBackColor = true;
+            this.btnDeletarCodCli.Click += new System.EventHandler(this.btnDeletarCodCli_Click);
             // 
             // pictureBox1
             // 
@@ -193,6 +225,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscarImg.TabIndex = 21;
             this.btnBuscarImg.Text = "Buscar Imagem";
             this.btnBuscarImg.UseVisualStyleBackColor = true;
+            this.btnBuscarImg.Click += new System.EventHandler(this.btnBuscarImg_Click);
             // 
             // tbxSenhaCli
             // 
@@ -249,62 +282,37 @@ namespace ProjetoAgenciaTI11T.View
             this.label9.Text = "Nome:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // btnAlterarCodCli
+            // tbxCodCli
             // 
-            this.btnAlterarCodCli.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAlterarCodCli.Location = new System.Drawing.Point(208, 223);
-            this.btnAlterarCodCli.Name = "btnAlterarCodCli";
-            this.btnAlterarCodCli.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarCodCli.TabIndex = 23;
-            this.btnAlterarCodCli.Text = "Alterar";
-            this.btnAlterarCodCli.UseVisualStyleBackColor = true;
-            this.btnAlterarCodCli.Click += new System.EventHandler(this.button4_Click);
+            this.tbxCodCli.Location = new System.Drawing.Point(230, 21);
+            this.tbxCodCli.Name = "tbxCodCli";
+            this.tbxCodCli.Size = new System.Drawing.Size(251, 23);
+            this.tbxCodCli.TabIndex = 6;
             // 
-            // btnDeletarCodCli
+            // btnCodCli
             // 
-            this.btnDeletarCodCli.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeletarCodCli.Location = new System.Drawing.Point(323, 223);
-            this.btnDeletarCodCli.Name = "btnDeletarCodCli";
-            this.btnDeletarCodCli.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletarCodCli.TabIndex = 24;
-            this.btnDeletarCodCli.Text = "Deletar";
-            this.btnDeletarCodCli.UseVisualStyleBackColor = true;
+            this.btnCodCli.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCodCli.Location = new System.Drawing.Point(487, 21);
+            this.btnCodCli.Name = "btnCodCli";
+            this.btnCodCli.Size = new System.Drawing.Size(75, 23);
+            this.btnCodCli.TabIndex = 5;
+            this.btnCodCli.Text = "Buscar";
+            this.btnCodCli.UseVisualStyleBackColor = true;
+            this.btnCodCli.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dataGridView1
+            // label3
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Código,
-            this.Nome,
-            this.Email,
-            this.Foto});
-            this.dataGridView1.Location = new System.Drawing.Point(10, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(665, 200);
-            this.dataGridView1.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(8, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(216, 21);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Digite o Codigo do Cliente:";
             // 
-            // Código
+            // openFileDialog1
             // 
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Foto
-            // 
-            this.Foto.HeaderText = "Foto";
-            this.Foto.Name = "Foto";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // TelaPesquisarCliente
             // 
@@ -312,6 +320,7 @@ namespace ProjetoAgenciaTI11T.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(713, 401);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
@@ -321,10 +330,10 @@ namespace ProjetoAgenciaTI11T.View
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,11 +360,12 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnDeletarCodCli;
-        private System.Windows.Forms.Button btnAlterarCodCli;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Foto;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
