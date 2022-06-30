@@ -153,5 +153,47 @@ namespace ProjetoAgenciaTI11T.Controller
                 }
             }
         }
+        public static BindingSource pesquisaOrigemPac()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pPesquisaOrigemPac", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@origemPac", Pacotes.OrigimPacote);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+
+            DataTable table = new DataTable();
+
+            sqlData.Fill(table);
+
+            BindingSource dados = new BindingSource();
+            dados.DataSource = table;
+
+            return dados;
+        }
+        public static BindingSource pesquisaDestinoPac()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pPesquisaDestinoPac", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@destinoPac", Pacotes.DestinoPacote);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+
+            DataTable table = new DataTable();
+
+            sqlData.Fill(table);
+
+            BindingSource dados = new BindingSource();
+            dados.DataSource = table;
+
+            return dados;
+        }
     }
 }

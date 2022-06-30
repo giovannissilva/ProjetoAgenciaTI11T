@@ -33,10 +33,6 @@ namespace ProjetoAgenciaTI11T.View
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbxPesquisaNomeFun = new System.Windows.Forms.TextBox();
             this.btnBuscaNomeFun = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,6 +49,9 @@ namespace ProjetoAgenciaTI11T.View
             this.btnCodFun = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -90,34 +89,13 @@ namespace ProjetoAgenciaTI11T.View
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código,
             this.Nome,
-            this.Email,
-            this.Foto});
+            this.Email});
             this.dataGridView1.Location = new System.Drawing.Point(10, 67);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(665, 200);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // Código
-            // 
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Foto
-            // 
-            this.Foto.HeaderText = "Foto";
-            this.Foto.Name = "Foto";
             // 
             // tbxPesquisaNomeFun
             // 
@@ -134,6 +112,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscaNomeFun.TabIndex = 2;
             this.btnBuscaNomeFun.Text = "Buscar";
             this.btnBuscaNomeFun.UseVisualStyleBackColor = true;
+            this.btnBuscaNomeFun.Click += new System.EventHandler(this.btnBuscaNomeFun_Click);
             // 
             // label2
             // 
@@ -282,6 +261,21 @@ namespace ProjetoAgenciaTI11T.View
             this.label1.Text = "Pesquisar Funcionario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // Código
+            // 
+            this.Código.HeaderText = "Código";
+            this.Código.Name = "Código";
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
             // TelaPesquisarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -312,10 +306,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Foto;
         private System.Windows.Forms.TextBox tbxPesquisaNomeFun;
         private System.Windows.Forms.Button btnBuscaNomeFun;
         private System.Windows.Forms.Label label2;
@@ -332,5 +322,8 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Button btnCodFun;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

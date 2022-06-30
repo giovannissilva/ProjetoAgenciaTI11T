@@ -148,7 +148,7 @@ namespace ProjetoAgenciaTI11T.Controller
 
             cmd.Parameters.AddWithValue("@nomeFun", Funcionario.NomeFun);
             cn.Open();
-            cmd.ExecuteReader();
+            cmd.ExecuteNonQuery();
 
             SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
 

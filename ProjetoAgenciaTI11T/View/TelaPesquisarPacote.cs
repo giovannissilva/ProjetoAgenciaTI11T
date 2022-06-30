@@ -170,6 +170,72 @@ namespace ProjetoAgenciaTI11T.View
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
             }
         }
+
+        private void btnBuscaOrigem_Click(object sender, EventArgs e)
+        {
+            if (tbxPesquisaOrigem.Text == "")
+            {
+                MessageBox.Show("Digite um nome para buscar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Pacotes.OrigimPacote = tbxPesquisaOrigem.Text;
+
+            dataGridView1.DataSource = ManipulaPacote.pesquisaOrigemPac();
+
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].HeaderCell.Value = "Valor";
+            dataGridView1.Columns[7].HeaderCell.Value = "Destino";
+            dataGridView1.Columns[8].HeaderCell.Value = "Origem";
+            dataGridView1.Columns[9].HeaderCell.Value = "Data Ida";
+            dataGridView1.Columns[10].HeaderCell.Value = "Data Volta";
+            dataGridView1.Columns[11].Visible = false;
+            dataGridView1.Columns[12].Visible = false;
+          
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarDestino_Click(object sender, EventArgs e)
+        {
+            if (tbxBuscarDestino.Text == "")
+            {
+                MessageBox.Show("Digite um nome para buscar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Pacotes.DestinoPacote = tbxBuscarDestino.Text;
+
+            dataGridView1.DataSource = ManipulaPacote.pesquisaDestinoPac();
+
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].HeaderCell.Value = "Valor";
+            dataGridView1.Columns[7].HeaderCell.Value = "Destino";
+            dataGridView1.Columns[8].HeaderCell.Value = "Origem";
+            dataGridView1.Columns[9].HeaderCell.Value = "Data Ida";
+            dataGridView1.Columns[10].HeaderCell.Value = "Data Volta";
+            dataGridView1.Columns[11].Visible = false;
+            dataGridView1.Columns[12].Visible = false;
+        }
     }
 }
 

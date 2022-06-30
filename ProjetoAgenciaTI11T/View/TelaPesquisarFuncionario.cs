@@ -137,5 +137,29 @@ namespace ProjetoAgenciaTI11T.View
                 return;
             }
         }
+
+        private void btnBuscaNomeFun_Click(object sender, EventArgs e)
+        {
+
+            if (tbxPesquisaNomeFun.Text == "")
+            {
+                MessageBox.Show("Digite um nome para buscar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Funcionario.NomeFun = tbxPesquisaNomeFun.Text;
+
+            dataGridView1.DataSource = ManipulaFuncionario.pesquisarNomeFun();
+
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].HeaderCell.Value = "Código";
+            dataGridView1.Columns[5].HeaderCell.Value = "Nome";
+            dataGridView1.Columns[6].HeaderCell.Value = "E-mail";
+            
+            
+        }
     }
 }
