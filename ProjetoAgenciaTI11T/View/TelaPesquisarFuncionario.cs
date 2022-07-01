@@ -154,12 +154,12 @@ namespace ProjetoAgenciaTI11T.View
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].Visible = false;
             dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[4].HeaderCell.Value = "Código";
-            dataGridView1.Columns[5].HeaderCell.Value = "Nome";
-            dataGridView1.Columns[6].HeaderCell.Value = "E-mail";
-            
-            
+            dataGridView1.Columns[3].HeaderCell.Value = "Código";
+            dataGridView1.Columns[4].HeaderCell.Value = "Nome";
+            dataGridView1.Columns[5].HeaderCell.Value = "E-mail";
+            dataGridView1.Columns[6].Visible = false;
+
+
         }
     }
 }

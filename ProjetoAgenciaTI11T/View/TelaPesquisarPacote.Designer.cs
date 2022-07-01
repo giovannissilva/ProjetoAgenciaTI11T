@@ -63,9 +63,9 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscaOrigem = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnBuscarDestino = new System.Windows.Forms.Button();
             this.tbxBuscarDestino = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnBuscarDestino = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -411,9 +411,9 @@ namespace ProjetoAgenciaTI11T.View
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dataGridView2);
+            this.tabPage3.Controls.Add(this.btnBuscarDestino);
             this.tabPage3.Controls.Add(this.tbxBuscarDestino);
             this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.btnBuscarDestino);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -422,12 +422,23 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage3.Text = "Pesquisa por Destino";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnBuscarDestino
+            // 
+            this.btnBuscarDestino.Location = new System.Drawing.Point(377, 12);
+            this.btnBuscarDestino.Name = "btnBuscarDestino";
+            this.btnBuscarDestino.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarDestino.TabIndex = 15;
+            this.btnBuscarDestino.Text = "Buscar";
+            this.btnBuscarDestino.UseVisualStyleBackColor = true;
+            this.btnBuscarDestino.Click += new System.EventHandler(this.btnBuscarDestino_Click_1);
+            // 
             // tbxBuscarDestino
             // 
             this.tbxBuscarDestino.Location = new System.Drawing.Point(83, 12);
             this.tbxBuscarDestino.Name = "tbxBuscarDestino";
             this.tbxBuscarDestino.Size = new System.Drawing.Size(251, 23);
             this.tbxBuscarDestino.TabIndex = 11;
+            this.tbxBuscarDestino.TextChanged += new System.EventHandler(this.tbxBuscarDestino_TextChanged);
             // 
             // label11
             // 
@@ -438,16 +449,6 @@ namespace ProjetoAgenciaTI11T.View
             this.label11.Size = new System.Drawing.Size(73, 21);
             this.label11.TabIndex = 9;
             this.label11.Text = "Destino:";
-            // 
-            // btnBuscarDestino
-            // 
-            this.btnBuscarDestino.Location = new System.Drawing.Point(353, 12);
-            this.btnBuscarDestino.Name = "btnBuscarDestino";
-            this.btnBuscarDestino.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarDestino.TabIndex = 10;
-            this.btnBuscarDestino.Text = "Buscar";
-            this.btnBuscarDestino.UseVisualStyleBackColor = true;
-            this.btnBuscarDestino.Click += new System.EventHandler(this.btnBuscarDestino_Click);
             // 
             // label1
             // 
@@ -563,12 +564,12 @@ namespace ProjetoAgenciaTI11T.View
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            this.dataGridView2.Location = new System.Drawing.Point(3, 67);
+            this.dataGridView2.Location = new System.Drawing.Point(6, 56);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 25;
             this.dataGridView2.Size = new System.Drawing.Size(665, 200);
-            this.dataGridView2.TabIndex = 14;
+            this.dataGridView2.TabIndex = 16;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -656,7 +657,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox tbxBuscarDestino;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnBuscarDestino;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Origem;
@@ -678,6 +678,7 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Volta;
+        private System.Windows.Forms.Button btnBuscarDestino;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

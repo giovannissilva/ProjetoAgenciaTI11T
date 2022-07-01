@@ -46,7 +46,7 @@ namespace ProjetoAgenciaTI11T.View
                 ManipulaPacote manipulaPacote = new ManipulaPacote();
                 manipulaPacote.pesquisarCodigoPac();
 
-                
+
             }
             if (Pacotes.Retorno == "Não")
             {
@@ -192,11 +192,11 @@ namespace ProjetoAgenciaTI11T.View
             dataGridView1.Columns[6].HeaderCell.Value = "Valor";
             dataGridView1.Columns[7].HeaderCell.Value = "Destino";
             dataGridView1.Columns[8].HeaderCell.Value = "Origem";
-            dataGridView1.Columns[9].HeaderCell.Value = "Data Ida";
-            dataGridView1.Columns[10].HeaderCell.Value = "Data Volta";
+            dataGridView1.Columns[9].HeaderCell.Value = "Ida";
+            dataGridView1.Columns[10].HeaderCell.Value = "Volta";
             dataGridView1.Columns[11].Visible = false;
             dataGridView1.Columns[12].Visible = false;
-          
+
 
         }
 
@@ -212,6 +212,10 @@ namespace ProjetoAgenciaTI11T.View
 
         private void btnBuscarDestino_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnBuscarDestino_Click_1(object sender, EventArgs e)
+        {
             if (tbxBuscarDestino.Text == "")
             {
                 MessageBox.Show("Digite um nome para buscar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -220,23 +224,28 @@ namespace ProjetoAgenciaTI11T.View
 
             Pacotes.DestinoPacote = tbxBuscarDestino.Text;
 
-            dataGridView1.DataSource = ManipulaPacote.pesquisaDestinoPac();
+            dataGridView2.DataSource = ManipulaPacote.pesquisaDestinoPac();
 
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].Visible = false;
-            dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[5].Visible = false;
-            dataGridView1.Columns[6].HeaderCell.Value = "Valor";
-            dataGridView1.Columns[7].HeaderCell.Value = "Destino";
-            dataGridView1.Columns[8].HeaderCell.Value = "Origem";
-            dataGridView1.Columns[9].HeaderCell.Value = "Data Ida";
-            dataGridView1.Columns[10].HeaderCell.Value = "Data Volta";
-            dataGridView1.Columns[11].Visible = false;
-            dataGridView1.Columns[12].Visible = false;
+            dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[1].Visible = false;
+            dataGridView2.Columns[2].Visible = false;
+            dataGridView2.Columns[3].Visible = false;
+            dataGridView2.Columns[4].Visible = false;
+            dataGridView2.Columns[5].Visible = false;
+            dataGridView2.Columns[6].HeaderCell.Value = "Valores";
+            dataGridView2.Columns[7].HeaderCell.Value = "Destino";
+            dataGridView2.Columns[8].HeaderCell.Value = "Origem";
+            dataGridView2.Columns[9].HeaderCell.Value = "Ida";
+            dataGridView2.Columns[10].HeaderCell.Value = "Volta";
+            dataGridView2.Columns[11].Visible = false;
+            dataGridView2.Columns[12].Visible = false;
+
+
+        }
+
+        private void tbxBuscarDestino_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
-
-

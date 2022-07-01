@@ -46,9 +46,11 @@ namespace ProjetoAgenciaTI11T.View
             this.tbxCodCli = new System.Windows.Forms.TextBox();
             this.tbxCli = new System.Windows.Forms.TextBox();
             this.tbxCodPac = new System.Windows.Forms.TextBox();
-            this.tbxFinal = new System.Windows.Forms.TextBox();
             this.btnFinal = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.cbxPagamento = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbxValor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +75,7 @@ namespace ProjetoAgenciaTI11T.View
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 112);
+            this.label3.Location = new System.Drawing.Point(20, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 15);
             this.label3.TabIndex = 2;
@@ -82,7 +84,7 @@ namespace ProjetoAgenciaTI11T.View
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 148);
+            this.label4.Location = new System.Drawing.Point(58, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 15);
             this.label4.TabIndex = 3;
@@ -91,7 +93,7 @@ namespace ProjetoAgenciaTI11T.View
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 200);
+            this.label5.Location = new System.Drawing.Point(20, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 15);
             this.label5.TabIndex = 4;
@@ -100,7 +102,7 @@ namespace ProjetoAgenciaTI11T.View
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 233);
+            this.label6.Location = new System.Drawing.Point(19, 228);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 15);
             this.label6.TabIndex = 5;
@@ -109,7 +111,7 @@ namespace ProjetoAgenciaTI11T.View
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(58, 262);
+            this.label7.Location = new System.Drawing.Point(58, 259);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 15);
             this.label7.TabIndex = 6;
@@ -118,7 +120,7 @@ namespace ProjetoAgenciaTI11T.View
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(21, 319);
+            this.label8.Location = new System.Drawing.Point(22, 311);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 15);
             this.label8.TabIndex = 7;
@@ -127,7 +129,7 @@ namespace ProjetoAgenciaTI11T.View
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 352);
+            this.label9.Location = new System.Drawing.Point(19, 342);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 15);
             this.label9.TabIndex = 8;
@@ -145,7 +147,7 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // btnCodCli
             // 
-            this.btnCodCli.Location = new System.Drawing.Point(371, 228);
+            this.btnCodCli.Location = new System.Drawing.Point(371, 223);
             this.btnCodCli.Name = "btnCodCli";
             this.btnCodCli.Size = new System.Drawing.Size(80, 25);
             this.btnCodCli.TabIndex = 10;
@@ -155,12 +157,13 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // btnPac
             // 
-            this.btnPac.Location = new System.Drawing.Point(371, 349);
+            this.btnPac.Location = new System.Drawing.Point(353, 342);
             this.btnPac.Name = "btnPac";
             this.btnPac.Size = new System.Drawing.Size(80, 25);
             this.btnPac.TabIndex = 11;
             this.btnPac.Text = "Buscar";
             this.btnPac.UseVisualStyleBackColor = true;
+            this.btnPac.Click += new System.EventHandler(this.btnPac_Click);
             // 
             // tbxCodFun
             // 
@@ -171,14 +174,14 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // tbxFun
             // 
-            this.tbxFun.Location = new System.Drawing.Point(165, 145);
+            this.tbxFun.Location = new System.Drawing.Point(170, 132);
             this.tbxFun.Name = "tbxFun";
             this.tbxFun.Size = new System.Drawing.Size(233, 23);
             this.tbxFun.TabIndex = 13;
             // 
             // tbxCodCli
             // 
-            this.tbxCodCli.Location = new System.Drawing.Point(172, 230);
+            this.tbxCodCli.Location = new System.Drawing.Point(171, 225);
             this.tbxCodCli.Name = "tbxCodCli";
             this.tbxCodCli.Size = new System.Drawing.Size(170, 23);
             this.tbxCodCli.TabIndex = 14;
@@ -192,17 +195,10 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // tbxCodPac
             // 
-            this.tbxCodPac.Location = new System.Drawing.Point(183, 349);
+            this.tbxCodPac.Location = new System.Drawing.Point(170, 339);
             this.tbxCodPac.Name = "tbxCodPac";
             this.tbxCodPac.Size = new System.Drawing.Size(159, 23);
             this.tbxCodPac.TabIndex = 16;
-            // 
-            // tbxFinal
-            // 
-            this.tbxFinal.Location = new System.Drawing.Point(545, 311);
-            this.tbxFinal.Name = "tbxFinal";
-            this.tbxFinal.Size = new System.Drawing.Size(144, 23);
-            this.tbxFinal.TabIndex = 17;
             // 
             // btnFinal
             // 
@@ -212,24 +208,54 @@ namespace ProjetoAgenciaTI11T.View
             this.btnFinal.TabIndex = 18;
             this.btnFinal.Text = "Finalizar";
             this.btnFinal.UseVisualStyleBackColor = true;
+            this.btnFinal.Click += new System.EventHandler(this.btnFinal_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(554, 283);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 15);
+            this.label10.Size = new System.Drawing.Size(123, 15);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Pagamento Efetuado";
+            this.label10.Text = "Pagamento Efetuado?";
+            // 
+            // cbxPagamento
+            // 
+            this.cbxPagamento.FormattingEnabled = true;
+            this.cbxPagamento.Items.AddRange(new object[] {
+            "Sim",
+            "Não"});
+            this.cbxPagamento.Location = new System.Drawing.Point(554, 311);
+            this.cbxPagamento.Name = "cbxPagamento";
+            this.cbxPagamento.Size = new System.Drawing.Size(118, 23);
+            this.cbxPagamento.TabIndex = 20;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(58, 373);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 15);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Valor:";
+            // 
+            // tbxValor
+            // 
+            this.tbxValor.Location = new System.Drawing.Point(146, 370);
+            this.tbxValor.Name = "tbxValor";
+            this.tbxValor.Size = new System.Drawing.Size(183, 23);
+            this.tbxValor.TabIndex = 22;
             // 
             // RegistraVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 401);
+            this.Controls.Add(this.tbxValor);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cbxPagamento);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnFinal);
-            this.Controls.Add(this.tbxFinal);
             this.Controls.Add(this.tbxCodPac);
             this.Controls.Add(this.tbxCli);
             this.Controls.Add(this.tbxCodCli);
@@ -248,6 +274,7 @@ namespace ProjetoAgenciaTI11T.View
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RegistraVenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistraVenda";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -276,5 +303,8 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.TextBox tbxFinal;
         private System.Windows.Forms.Button btnFinal;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbxPagamento;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbxValor;
     }
 }
